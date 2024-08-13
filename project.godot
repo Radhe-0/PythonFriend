@@ -10,14 +10,14 @@ config_version=5
 
 [application]
 
-config/name="muestra_desk_app"
-run/main_scene="res://main.tscn"
+config/name="PythonFriend"
+run/main_scene=""
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/nodewebsockets/plugin.cfg", "res://addons/python_friend/plugin.cfg")
+enabled=PackedStringArray("res://addons/python_friend/plugin.cfg")
 
 [rendering]
 
