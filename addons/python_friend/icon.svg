@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10.99477mm"
+   height="11.551889mm"
+   viewBox="0 0 10.99477 11.551889"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="icon.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-42.908794,-56.704002)">
+    <circle
+       style="fill:#ffd43b;fill-opacity:1;stroke-width:0.0420223"
+       id="path115-3"
+       cx="49.903564"
+       cy="64.25589"
+       inkscape:label="amarillo"
+       r="4" />
+    <circle
+       style="fill:#3776ab;fill-opacity:1;stroke-width:0.0420223"
+       id="path115"
+       cx="46.908794"
+       cy="60.704002"
+       inkscape:label="azul"
+       r="4" />
+  </g>
+</svg>
