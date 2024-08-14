@@ -10,7 +10,7 @@ PythonFriend is a tool for Godot that makes it easy to use Python code in your G
 - **Works with many Python tools:** It works with a lot of Python libraries.
 - **Works on Windows, Linux, and macOS:** You can use it on different computers.
 - **Use Python virtual environments:** This makes it easier to manage your Python projects.
-- **Combine Python code with your Godot game:**  You can make your Godot games using Python code.
+- **Combine Python code with your Godot app:**  You can make your Godot apps using Python as backend.
 
 ## How to Install
 
