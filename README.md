@@ -29,7 +29,7 @@ PythonFriend is a tool for Godot that makes it easy to use Python code in your G
     - **Executable File Name:** This is the name of your main Python file after you've made it into an executable program. The name changes depending on your computer:
         - **Linux/MacOS:** `py_backend`
         - **Windows:** `py_backend.exe`
-        - This executable file needs to be in the same folder as the Godot program.
+        - This executable file needs to be in the same folder as the **exported** Godot program.
 
 
 ## Example
