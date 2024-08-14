@@ -79,7 +79,7 @@ if __name__ == "__main__":
 	godot_friend.ready()
 ```
 
-**How it Works:**
+## How it Works
 
 PythonFriend uses a simple way to let Godot and Python talk to each other.  They share information using `.json` files:
 
