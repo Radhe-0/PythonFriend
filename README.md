@@ -19,7 +19,7 @@ PythonFriend is a tool for Godot that makes it easy to use Python code in your G
 
 ## How to Set It Up:
 
-1. **Make a Python virtual environment inside `addons/python_friend/python_stuff/`.** 
+1. **Make a Python virtual environment inside `addons/python_friend/python_stuff/`. and activate it** 
 2. **Open your virtual environment and run `pip install -r requirements.txt` from the `addons/python_friend/python_stuff/` folder.** 
 3. **Make a `.gdignore` file in the virtual environment folder (`addons/python_friend/python_stuff/venv/`).** This stops Godot from using files from the virtual environment.
 4. **Add a `PythonFriend` node to your Godot scene.**
