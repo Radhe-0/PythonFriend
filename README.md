@@ -20,9 +20,14 @@ PythonFriend is a tool for Godot that makes it easy to use Python code in your G
 
 1. **Create and activate a Python virtual environment** inside `addons/python_friend/python_stuff/`.
 2. **Install the required Python packages** by running `pip install -r requirements.txt` from the `addons/python_friend/python_stuff/` folder.
-3. **Create a `.gdignore` file** in the virtual environment folder (`addons/python_friend/python_stuff/venv/`) to prevent Godot from including files from the virtual environment.
-4. **Add a `PythonFriend` node** to your Godot scene.
-5. **Configure the `PythonFriend` node:**
+3. **Tkinter Installation (Linux Only):** On Linux systems, you may need to install Tkinter separately. You can do this using your distribution's package manager. For example, on Debian or Ubuntu, you can use the following command:
+
+   ```bash
+   sudo apt-get install python3-tk 
+   ```
+4. **Create a `.gdignore` file** in the virtual environment folder (`addons/python_friend/python_stuff/venv/`) to prevent Godot from including files from the virtual environment.
+5. **Add a `PythonFriend` node** to your Godot scene.
+6. **Configure the `PythonFriend` node:**
    - **Python Interpreter:** Specify the path to your Python interpreter within the virtual environment. Example: `res://addons/python_friend/python_stuff/venv/bin/python3`
    - **Main Python File:** Provide the path to your main Python file containing the functions to be called. Example: `res://addons/python_friend/python_stuff/main.py`
    - **Executable File Name:** The name of the executable file created from your main Python file, which must be in the same folder as the exported Godot project. Examples:
