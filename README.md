@@ -123,6 +123,14 @@ PythonFriend uses a straightforward method for communication between Godot and P
 - **Tkinter for Flow Monitoring:** Tkinter is used in Python to display debug messages and monitor the flow of information between Godot and Python. This helps to track and visualize communication, making it easier to understand the data exchange process.
 - **Editor Debugging:** Errors in Python code can be observed and debugged within the Godot editor. This allows for real-time feedback and troubleshooting during development.
 
+## Limitations
+
+PythonFriend is currently in its early stages and has a few limitations:
+
+- **Call Frequency:** It's not recommended to make more than 150 calls to Python per minute due to potential performance bottlenecks.
+- **Android Support:** The current implementation is not compatible with Android.
+- **Error Handling:** While basic error handling is in place, more robust mechanisms are planned for future updates.
+
 
 **PythonFriend makes it easy to add Python to your Godot projects!** 
 
