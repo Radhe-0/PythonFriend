@@ -1,13 +1,31 @@
 import json
 from platformdirs import user_data_dir
 from pathlib import Path
-
+import tkinter as tk
+from tkinter import messagebox
 
 app_name = ""
+
+debug_enabled = True
+
 godot_data_dir = Path(user_data_dir("godot/app_userdata"))
 app_data_dir = godot_data_dir / app_name
 
 func_map = {}
+
+
+def show_debug_message(message):
+	if debug_enabled:
+		root = tk.Tk()
+		root.withdraw()
+		messagebox.showinfo("Debug", message)
+		root.destroy()
+
+
+def set_debug(enabled):
+	global debug_enabled
+	debug_enabled = enabled
+
 
 def set_app_name(name):
 	global app_name
@@ -16,20 +34,30 @@ def set_app_name(name):
 	app_data_dir = godot_data_dir / app_name
 
 
-def get_py_input():
-	py_input = app_data_dir / "py_input.json"
-	if py_input.exists():
-		with open(py_input, 'r') as file:
+def get_comm_channel_input():
+	comm_channel_file = app_data_dir / "comm_channel.json"
+	show_debug_message(f"Checking for comm_channel.json at: {comm_channel_file}")
+
+	if comm_channel_file.exists():
+
+		with open(comm_channel_file, 'r') as file:
 			data = json.load(file)
-			py_input.unlink()
+
+			with open(comm_channel_file, 'w') as clear_file:
+				clear_file.write("")
+
+			show_debug_message(f"comm_channel.json found and read: {data}")
 			return data
+
+	show_debug_message("comm_channel.json not found.")
 	return None
 
 
-def set_py_output(data):
-	py_output = app_data_dir / "py_output.json"
-	with open(py_output, 'w') as file:
+def set_comm_channel_output(data):
+	comm_channel_file = app_data_dir / "comm_channel.json"
+	with open(comm_channel_file, 'w') as file:
 		json.dump(data, file, indent=4)
+	show_debug_message(f"comm_channel.json updated with data: {data}")
 
 
 def add_map(mapping):
@@ -39,14 +67,25 @@ def add_map(mapping):
 
 def ready():
 	try:
-		py_input = get_py_input()
-		func = py_input.get("func")
-		params = py_input.get("params")
+		comm_channel_input = get_comm_channel_input()
+		if not comm_channel_input:
+			set_comm_channel_output({"error": "No input found."})
+			show_debug_message("No input found in comm_channel.json.")
+			return
+
+		func = comm_channel_input.get("func")
+		params = comm_channel_input.get("params")
+		show_debug_message(f"Function requested: {func}\nParameters: {params}")
 
 		if func in func_map:
 			data = func_map[func](params)
-			set_py_output(data)
+			set_comm_channel_output(data)
 		else:
-			set_py_output({"error": f"Function '{func}' not found in function map."})
+			error_msg = f"Function '{func}' not found in function map."
+			set_comm_channel_output({"error": error_msg})
+			show_debug_message(error_msg)
+
 	except Exception as e:
-		set_py_output({"error": str(e)})
+		error_msg = f"An error occurred: {str(e)}"
+		set_comm_channel_output({"error": error_msg})
+		show_debug_message(error_msg)
