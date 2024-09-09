@@ -88,7 +88,7 @@ func execute_python_script():
 		var command = exec_file_name
 		OS.execute(command, [])
 
-	elif OS.has_feature("macos"):  # Added macOS support
+	elif OS.has_feature("macos"):
 		var command = "./" + exec_file_name
 		OS.execute(command, [])
 	
