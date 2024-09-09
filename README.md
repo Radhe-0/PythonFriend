@@ -66,6 +66,8 @@ if __name__ == "__main__":
     godot_friend.set_app_name(app_name)
     # Make Python functions accessible from Godot by name.
     godot_friend.add_map(func_map)
+    # Set tkinter debug even in export
+    godot_friend.set_debug(True)
     # Process input from Godot and execute corresponding Python functions.
     godot_friend.ready()
 ```
